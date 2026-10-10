@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Death Star Trench Run</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; background: #000; font-family: 'Courier New', monospace; }
+        canvas { display: block; }
+        #ui {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            color: #0f0;
+            font-size: 14px;
+            line-height: 1.5;
+            pointer-events: none;
+            z-index: 10;
+        }
+        #message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ff0;
+            font-size: 24px;
+            text-align: center;
+            text-shadow: 0 0 10px #f00;
+            display: none;
+            z-index: 20;
+            max-width: 80%;
+        }
+        #message.show { display: block; }
+        #controls {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #888;
+            font-size: 12px;
+            text-align: center;
+            pointer-events: none;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="glcanvas"></canvas>
+    <div id="ui"></div>
+    <div id="message"></div>
+    <div id="controls">ARROWS: Move | SPACE: Fire Lasers | SHIFT: Proton Torpedo</div>
+    <script src="game.js"></script>
+</body>
+</html>
